@@ -1,16 +1,6 @@
-	//Extra feature - MULTIPLE BACKGROUNDS [See select-box beside shuffle button on page]
+//Extra feature - MULTIPLE BACKGROUNDS [See select-box beside shuffle button on page]
 "use strict";
 window.onload = function () {
-
-	//Prepend "https:" to W3C image links in index.html to display their images
-	function fixW3C_Images() {
-		let w3cImg = document.getElementsByTagName("img");
-		let w3cLink = document.getElementsByTagName("a");
-		for (let i = 0; i < w3cImg.length; i++) {
-			w3cImg[i].src = "https:" + w3cImg[i].src.substring(5);
-			w3cLink[i].href = "https:" + w3cLink[i].href.substring(5);
-		}
-	}
 
 	//Main function
 	function launch() {
@@ -112,7 +102,7 @@ window.onload = function () {
 			}
 		}
 
-		//Shuffles algorithm - randomly chooses a movable piece and swaps position with empty space a couple hundred times.
+		//Shuffle algorithm - randomly chooses a movable piece and swaps position with empty space a couple hundred times
 		function shuffle() {
 			let tempVal = [], movablePieces = [];
 			let index = 0, row = 0, col = 0;
@@ -210,5 +200,4 @@ window.onload = function () {
 	}
 
 	launch();
-	fixW3C_Images();
 };
